@@ -3,7 +3,7 @@ export default function CardGame({ game }) {
 
     return (
         <article key={game.id}>
-            <img src={game.background_image} alt="game" />
+            <img src={game.background_image} alt="game" className="img-fluid" />
             <strong>{game.name}</strong>
             <small>{genres}</small>
             <p>{game.released}</p>

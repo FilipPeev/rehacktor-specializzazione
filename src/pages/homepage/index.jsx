@@ -29,17 +29,17 @@ export default function HomePage() {
     return (
         <>
 
-            <div className="container">
+            <div className="container ">
                 <div className="row justify-content-center">
                     <div className="col-12 d-flex justify-content-center text-light  ">
                         <h1 className="fs-1 pt-5">Home Page</h1>
                     </div>
-                    <div className="col-3 bg-danger">
-                        {error && <article>{error}</article>}
-                        {data && data.results.map((game) => (
+                    {error && <article>{error}</article>}
+                    {data && data.results.map((game) => (
+                        <div className="col-3 ">
                             <CardGame key={game.id} game={game} />
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
