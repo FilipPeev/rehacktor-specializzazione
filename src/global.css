@@ -1,0 +1,18 @@
+.headerCustom {
+    border-bottom: 1px solid white;
+    background-color: #000;
+}
+
+li {
+    text-decoration: none;
+}
+
+.footerCustom {
+    border-top: 1px solid white;
+}
+
+.backgroundCustom {
+    background-color: #213145;
+    color: white;
+
+}
