@@ -36,8 +36,8 @@ export default function HomePage() {
                     </div>
                     {error && <article>{error}</article>}
                     {data && data.results.map((game) => (
-                        <div className="col-3 ">
-                            <CardGame key={game.id} game={game} />
+                        <div className="col-3" key={game.id}>
+                            <CardGame game={game} />
                         </div>
                     ))}
                 </div>

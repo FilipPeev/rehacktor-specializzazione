@@ -1,13 +1,20 @@
+import LazyLoadGameImage from "./LazyLoadGameImage";
+import { Link } from 'react-router';
+
 export default function CardGame({ game }) {
     const genres = game.genres.map((genre) => genre.name).join(', ');
 
+    const { background_image: image } = game;
+
     return (
         <article key={game.id}>
-            <img src={game.background_image} alt="game" className="img-fluid" />
+            <LazyLoadGameImage image={image} />
             <strong>{game.name}</strong>
             <small>{genres}</small>
             <p>{game.released}</p>
-            <button>Visita il gioco</button>
+            <button className="btn btn-primary">
+                <Link to={`/games/${game.slug}/${game.id}`}>Visita il gioco</Link>
+            </button>
         </article>
     );
 };

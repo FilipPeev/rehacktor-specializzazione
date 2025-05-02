@@ -4,6 +4,11 @@
 }
 
 li {
+    list-style-type: none;
+}
+
+a {
+    color: white;
     text-decoration: none;
 }
 
@@ -15,4 +20,38 @@ li {
     background-color: #213145;
     color: white;
 
+}
+
+.btnCustom {
+    padding: 1rem;
+    background-color: #213145;
+    width: 7rem;
+    border-radius: 0.5rem;
+    list-style: none;
+}
+
+.sidebarCustom {
+    background-color: #213145;
+    color: white;
+}
+
+.offcanvas-header {
+    background-color: #131b25;
+    color: white;
+}
+
+.btnHeader {
+    background-color: orange;
+    margin-left: auto;
+    border-radius: 0.5rem;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+}
+
+.fixedHeader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000de;
+    z-index: 1;
 }
