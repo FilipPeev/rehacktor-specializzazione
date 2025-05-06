@@ -1,6 +1,8 @@
+import Searchbar from "./SearchBar";
+
 export default function Header() {
     return (
-        <nav className="d-flex align-items-center sticky-top">
+        <nav className="d-flex align-items-center">
             <ul className="">
                 <li><strong>Rehacktor</strong></li>
             </ul>
@@ -19,6 +21,8 @@ export default function Header() {
                     </details>
                 </li>
             </ul>
+
+            < Searchbar />
 
             {/*Pulsante per aprire la sidebar*/}
             <a
