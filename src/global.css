@@ -55,3 +55,24 @@ a {
     background-color: #000000de;
     z-index: 1;
 }
+
+.registerLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 400px;
+    background-color: #0b1016;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 1.5rem;
+}
+
+label {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+input {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
