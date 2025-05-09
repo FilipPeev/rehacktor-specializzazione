@@ -1,28 +1,19 @@
 import Searchbar from "./SearchBar";
-import { Link } from "react-router";
-import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router";
 import supabase from "../supabase/supabase-client";
+import SessionContext from "../context/SessionContext"
+import { useContext } from "react";
 
 export default function Header() {
-    const [session, setSession] = useState(null);
-
-    const getSession = async () => {
-        const { data, error } = await supabase.auth.getSession();
-        if (error) setSession(null);
-        console.log(data);
-        setSession(data);
-    };
+    const navigate = useNavigate();
+    const { session } = useContext(SessionContext);
 
     const signOut = async () => {
         const { error } = await supabase.auth.signOut()
         if (error) console.log(error);
-        alert('Signed Out 👋')
-        getSession();
+        alert('Signed out 👋');
+        navigate('/');
     }
-
-    useEffect(() => {
-        getSession();
-    }, []);
 
     return (
         <nav className="d-flex align-items-center">
@@ -51,16 +42,7 @@ export default function Header() {
                         <Link to="/register" className="secondary">Register</Link>
                     </li>
                 </ul>
-            )};
-
-            <li>
-                <Link to="/login">Login</Link>
-            </li>
-
-
-            <li>
-                <Link to="/register">Register</Link>
-            </li>
+            )}
 
             < Searchbar />
 

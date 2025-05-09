@@ -1,3 +1,4 @@
+import SessionProvider from "./context/SessionProvider"
 import { Routing } from "./routes/Routing"
 
 
@@ -5,7 +6,9 @@ function App() {
 
   return (
     <>
-      <Routing />
+      <SessionProvider>
+        <Routing />
+      </SessionProvider>
     </>
   )
 }
