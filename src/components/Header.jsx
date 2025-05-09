@@ -25,10 +25,14 @@ export default function Header() {
                 <ul>
                     <li>
                         <details className="dropdown">
-                            <summary>Account</summary>
+                            <summary>Hey {session?.user.user_metadata.first_name}!</summary>
                             <ul dir="rtl">
-                                <li><a href="#">Settings</a></li>
-                                <li><button onClick={signOut}>logout</button></li>
+                                <li>
+                                    <Link to="/account">Account</Link>
+                                </li>
+                                <li>
+                                    <button onClick={signOut}>logout</button>
+                                </li>
                             </ul>
                         </details>
                     </li>
