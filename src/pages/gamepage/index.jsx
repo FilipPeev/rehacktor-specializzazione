@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import useFetchSolution from "../../hook/useFetchSolution";
+import ToggleFavourite from "../../components/ToggleFavourite";
 
 
 export default function GamePage() {
@@ -19,6 +20,7 @@ export default function GamePage() {
                     <p>Rating: {data && data.rating}</p>
                     <p>About:</p>
                     <p>{data && data.description_raw}</p>
+                    {data && <ToggleFavourite data={data} />}
                 </div>
             </div>
             <div>

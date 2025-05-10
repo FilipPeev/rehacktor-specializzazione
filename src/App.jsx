@@ -1,5 +1,7 @@
+import FavoritesProvider from "./context/FavoritesProvider"
 import SessionProvider from "./context/SessionProvider"
 import { Routing } from "./routes/Routing"
+
 
 
 function App() {
@@ -7,7 +9,9 @@ function App() {
   return (
     <>
       <SessionProvider>
-        <Routing />
+        <FavoritesProvider>
+          <Routing />
+        </FavoritesProvider>
       </SessionProvider>
     </>
   )

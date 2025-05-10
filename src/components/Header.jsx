@@ -28,7 +28,7 @@ export default function Header() {
                             <summary>Hey {session?.user.user_metadata.first_name}!</summary>
                             <ul dir="rtl">
                                 <li>
-                                    <Link to="/account">Account</Link>
+                                    <Link to="/profile">Profile</Link>
                                 </li>
                                 <li>
                                     <button onClick={signOut}>logout</button>
