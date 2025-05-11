@@ -17,8 +17,8 @@ export default function Searchbar() {
     };
 
     return (
-        <form onSubmit={handleSearch}>
-            <fieldset role="group">
+        <form onSubmit={handleSearch} className="w-25">
+            <fieldset role="group" className="w-100">
                 <input
                     type="text"
                     name="search"
@@ -26,8 +26,8 @@ export default function Searchbar() {
                     onChange={(event) => setSearch(event.target.value)}
                     value={search}
                     aria-invalid={ariaInvalid}
+                    className="searchInput text-light"
                 />
-                <input type="submit" value="Go" />
             </fieldset>
         </form>
     )

@@ -13,15 +13,19 @@ export default function GenrePage() {
 
     return (
         <>
-            <h2>Welcome to {genre} page</h2>
+            <h2 className="text-center mt-3">Welcome to the {genre} page</h2>
             <div className="container">
-                <div className="row">
-                    <div className="col-3">
-                        {error && <article>{error}</article>}
-                        {data &&
-                            data.results.map((game) => <CardGame key={game.id} game={game} />)
-                        }
-                    </div>
+                <div className="row justify-content-center ">
+
+                    {error && <article>{error}</article>}
+                    {data &&
+                        data.results.map((game) =>
+                            <div className="col-md-3 col-12 my-5">
+                                <CardGame key={game.id} game={game} />
+                            </div>
+                        )
+                    }
+
                 </div>
             </div>
         </>

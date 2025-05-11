@@ -12,12 +12,14 @@ export default function GenresDropDown() {
                 {loading && <li>Caricamento...</li>}
                 {error && <li className="text-danger">Errore: {error}</li>}
                 {data && data.results.map((genre) => (
-                    <li key={genre.id}>
+
+                    <button key={genre.id} className="btnCustom">
                         <Link to={`/games/${genre.slug}`}>{genre.name}</Link>
-                    </li>
+                    </button>
                 ))}
             </ul>
         </details>
+
     );
 }
 

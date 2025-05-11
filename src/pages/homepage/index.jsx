@@ -17,7 +17,7 @@ export default function HomePage() {
                     </div>
                     {error && <article>{error}</article>}
                     {data && data.results.map((game) => (
-                        <div className="col-3" key={game.id}>
+                        <div className="col-md-3 col-12 my-5" key={game.id}>
                             <CardGame game={game} />
                         </div>
                     ))}

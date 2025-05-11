@@ -1,5 +1,4 @@
 import LazyLoadGameImage from "./LazyLoadGameImage";
-import { Link } from 'react-router';
 
 export default function CardGame({ game }) {
     const genres = game.genres.map((genre) => genre.name).join(', ');
@@ -7,14 +6,13 @@ export default function CardGame({ game }) {
     const { background_image: image } = game;
 
     return (
-        <article key={game.id}>
-            <LazyLoadGameImage image={image} />
-            <strong>{game.name}</strong>
-            <small>{genres}</small>
-            <p>{game.released}</p>
-            <button className="btn btn-primary">
-                <Link to={`/games/${game.slug}/${game.id}`}>Visita il gioco</Link>
-            </button>
-        </article>
+        <a href={`/games/${game.slug}/${game.id}`}>
+            <article key={game.id} className="cardCustom">
+                <LazyLoadGameImage image={image || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg'} />
+                <h4 className="mt-4">{game.name}</h4>
+                <small>{genres || "No Genres Associated"}</small>
+                <p className="marginP">{game.released || "No Release Date Associated"}</p>
+            </article>
+        </a >
     );
 };

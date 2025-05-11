@@ -1,6 +1,8 @@
 .headerCustom {
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
     background-color: #000;
+    height: 5rem;
+    justify-content: space-between;
 }
 
 li {
@@ -17,7 +19,7 @@ a {
 }
 
 .backgroundCustom {
-    background-color: #213145;
+    background-color: #161920;
     color: white;
 
 }
@@ -28,6 +30,7 @@ a {
     width: 7rem;
     border-radius: 0.5rem;
     list-style: none;
+    margin-top: 0.5rem;
 }
 
 .sidebarCustom {
@@ -41,11 +44,11 @@ a {
 }
 
 .btnHeader {
-    background-color: orange;
-    margin-left: auto;
+    background-color: #213145;
     border-radius: 0.5rem;
     padding-block: 0.5rem;
     padding-inline: 1rem;
+    margin-right: 0.5rem;
 }
 
 .fixedHeader {
@@ -61,10 +64,12 @@ a {
     flex-direction: column;
     gap: 0.75rem;
     max-width: 400px;
-    background-color: #0b1016;
+    background-color: #1F232E;
     padding: 2rem;
     margin-top: 2rem;
     border-radius: 1.5rem;
+    width: 100%;
+    height: 100%;
 }
 
 label {
@@ -75,4 +80,57 @@ label {
 input {
     padding: 0.5rem;
     font-size: 1rem;
+}
+
+.gameImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.cardCustom {
+    background-color: #1F232E;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: 0.5s ease;
+}
+
+.cardCustom:hover {
+    transform: rotate(2deg);
+}
+
+.marginP {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+h4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.searchInput {
+    background-color: #213145;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin-left: -7.5%;
+}
+
+.rehacktor {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.burgerMenu:active {
+    border: none;
+}
+
+.btn:active,
+.btn:focus {
+    border: none;
 }

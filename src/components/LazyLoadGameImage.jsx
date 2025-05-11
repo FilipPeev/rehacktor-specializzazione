@@ -10,6 +10,6 @@ export default function LazyLoadGameImage({ image }) {
                 style: { transitionDelay: "0.5s" },
             }}
             src={image}
-            className="img-fluid" />
+            className="img-fluid gameImage" />
     )
 };
