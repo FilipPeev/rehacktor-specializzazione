@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import useFetchSolution from "../../hook/useFetchSolution";
 import ToggleFavourite from "../../components/ToggleFavourite";
+import Chatbox from "../../components/Chatbox";
 
 
 export default function GamePage() {
@@ -23,6 +24,11 @@ export default function GamePage() {
                     {data && <ToggleFavourite data={data} />}
                 </div>
             </div>
+
+            <div className="style-chatbox">
+                <Chatbox data={data && data} />
+            </div>
+
             <div>
                 <img src={data && data.background_image} alt="" className="img-fluid" />
             </div>
