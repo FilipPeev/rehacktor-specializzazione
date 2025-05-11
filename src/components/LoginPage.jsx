@@ -43,7 +43,7 @@ export default function LoginPage() {
     };
 
     const onBlur = (property) => () => {
-        const message = getFieldError(FormSchemaLogin, property, formState[property]);
+        const message = getFieldError(property, formState[property], FormSchemaLogin);
         setFormErrors((prev) => ({ ...prev, [property]: message }));
         setTouchedFields((prev) => ({ ...prev, [property]: true }))
     };
