@@ -8,17 +8,21 @@ export default function GenresDropDown() {
     return (
         <>
             <h1>Genres:</h1>
-            {loading && <li>Caricamento...</li>}
-            {error && <li className="text-danger">Errore: {error}</li>}
-            {data && data.results.map((genre) => (
-
-                <button key={genre.id} className="btnCustom">
-                    <Link to={`/games/${genre.slug}`}>{genre.name}</Link>
-                </button>
-            ))}
-
+            <div>
+                {loading && <li>Caricamento...</li>}
+                {error && <li className="text-danger">Errore: {error}</li>}
+                {data && data.results.map((genre) => (
+                    <Link
+                        key={genre.id}
+                        to={`/games/${genre.slug}`}
+                        className="btnCustom"
+                        style={{ margin: "0.2rem", display: "inline-block" }}
+                    >
+                        {genre.name}
+                    </Link>
+                ))}
+            </div>
         </>
-
     );
 }
 

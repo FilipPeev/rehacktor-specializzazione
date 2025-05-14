@@ -17,8 +17,8 @@ export function Routing() {
                 <Route element={<Layout />}>
                     <Route path="/" element={<HomePage />} />
                     <Route path="*" element={<ErrorPage />} />
-                    <Route path="/games/:genre" element={<GenrePage />} />
                     <Route path="/games/:slug/:id" element={<GamePage />} />
+                    <Route path="/games/:genre" element={<GenrePage />} />
                     <Route path="/search" element={<SearchPage />} />
                     <Route path="/register" element={<RegisterPage />} />
                     <Route path="/login" element={<LoginPage />} />
