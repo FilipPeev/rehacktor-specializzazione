@@ -11,6 +11,9 @@ export default function GenrePage() {
     const { data, error } = useFetchSolution(initialUrl);
 
 
+
+
+
     return (
         <>
             <h2 className="text-center mt-3">Welcome to the {genre} page</h2>
