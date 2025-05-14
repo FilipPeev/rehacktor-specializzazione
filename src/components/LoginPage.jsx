@@ -93,6 +93,7 @@ export default function LoginPage() {
 
                 <br />
                 <button type="submit">Sign in</button>
+                <p>Non hai un account? <a href="/register" className="link">Registrati.</a></p>
             </form>
         </div>
     );

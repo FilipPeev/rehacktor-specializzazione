@@ -1,5 +1,4 @@
 import GenresDropDown from "./GenresDropDown";
-import LoginRegisterButton from "./LoginRegisterButton";
 
 export default function Sidebar() {
     return (
@@ -21,13 +20,7 @@ export default function Sidebar() {
                 ></button>
             </div>
             <div className="offcanvas-body sidebarCustom">
-                <div>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum ratione dolorem voluptate harum obcaecati natus quia nobis, excepturi quod, quibusdam vel officiis architecto veniam perspiciatis nemo libero, rem similique. Ipsam.
-                </div>
-                <div className="">
-                    <LoginRegisterButton />
-                </div>
-                <div className="mt-3 btnCustom">
+                <div className="mt-3">
                     <GenresDropDown />
                 </div>
             </div>

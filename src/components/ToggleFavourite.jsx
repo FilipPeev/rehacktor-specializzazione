@@ -24,6 +24,7 @@ export default function ToggleFavourite({ data }) {
                     game_id: game.id,
                     game_name: game.name,
                     game_image: game.background_image,
+                    released: game.released,
                 },
             ])
             .select();
@@ -56,12 +57,12 @@ export default function ToggleFavourite({ data }) {
     return (
         <div>
             {isFavorite() ? (
-                <button onClick={() => removeFavorite(data)}>
-                    <FaHeart />
+                <button onClick={() => removeFavorite(data)} className="unfavButton">
+                    Rimuovi dai preferiti <FaHeart />
                 </button>
             ) : (
-                <button onClick={() => addFavourites(data)}>
-                    <FaRegHeart />
+                <button onClick={() => addFavourites(data)} className="favButton">
+                    Aggiungi ai preferiti <FaRegHeart />
                 </button>
             )}
         </div>

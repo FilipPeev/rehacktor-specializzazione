@@ -13,7 +13,9 @@ export default function Layout() {
                 <Header />
             </div>
 
-            <Sidebar />
+            <aside>
+                <Sidebar />
+            </aside>
 
             <div className="flex-fill">
                 <Outlet />

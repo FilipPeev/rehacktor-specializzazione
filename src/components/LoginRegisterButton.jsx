@@ -1,7 +1,7 @@
 import { useNavigate, Link } from "react-router";
 import { useContext } from "react";
 import SessionContext from "../context/SessionContext";
-
+import supabase from "../supabase/supabase-client";
 
 export default function LoginRegisterButton() {
     const navigate = useNavigate();
@@ -17,36 +17,21 @@ export default function LoginRegisterButton() {
     return (
 
         session ? (
-            <ul>
-                <li>
-                    <details className="dropdown">
-                        <summary>Hey {session?.user.user_metadata.first_name}!</summary>
-                        <ul dir="rtl">
-                            <li>
-                                <Link to="/profile">Profile</Link>
-                            </li>
-                            <li>
-                                <button onClick={signOut} className="btnHeader">logout</button>
-                            </li>
-                        </ul>
-                    </details>
-                </li>
-            </ul >
-        ) : (
 
-            <div className="dropdown">
-                <button className="btn btn-secondary dropdown-toggle mt-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Account
-                </button>
-                <ul className="dropdown-menu bg-warning ">
-                    <li className="text-dark">
-                        <Link to="/login" className="">Login</Link>
-                    </li>
-                    <li>
-                        <Link to="/register" className="">Register</Link>
-                    </li>
-                </ul>
-            </div>
+            <span>
+                <a href="/profile">{session?.user.user_metadata.first_name}!</a>
+                <button onClick={signOut} className="btnLogout">Logout</button>
+            </span>
+
+
+        ) : (
+            <>
+                <div>
+
+                    <Link to="/login" className="">Accedi</Link>
+
+                </div>
+            </>
         )
 
     )

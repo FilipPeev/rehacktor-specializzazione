@@ -17,7 +17,7 @@ export default function Searchbar() {
     };
 
     return (
-        <form onSubmit={handleSearch} className="w-25">
+        <form onSubmit={handleSearch} className="w-50">
             <fieldset role="group" className="w-100">
                 <input
                     type="text"

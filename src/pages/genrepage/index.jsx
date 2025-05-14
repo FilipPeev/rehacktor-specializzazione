@@ -20,8 +20,8 @@ export default function GenrePage() {
                     {error && <article>{error}</article>}
                     {data &&
                         data.results.map((game) =>
-                            <div className="col-md-3 col-12 my-5">
-                                <CardGame key={game.id} game={game} />
+                            <div className="col-md-3 col-12 my-5" key={game.id}>
+                                <CardGame game={game} />
                             </div>
                         )
                     }

@@ -4,15 +4,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import supabase from '../supabase/supabase-client';
 
 const chatContainer = {
-    marginTop: '5px',
-    padding: '0px 3px',
-    width: '100%',
-    height: '50vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundColor: '#1b121b',
-    overflowY: 'scroll',
+
 };
 
 dayjs.extend(relativeTime);
@@ -69,16 +61,27 @@ export default function RealtimeChat({ data }) {
         scrollSmoothToBottom();
     }, [messages]);
 
+    // console.log(messages);
     return (
-        <div style={chatContainer} ref={messageRef}>
+        <div ref={messageRef} className="chatboxStyle">
             {loadingInitial && <progress></progress>}
             {error && <article>{error}</article>}
             {messages &&
                 messages.map((message) => (
+
                     <article key={message.id}>
-                        <p>{message.profile_username}</p>
-                        <small>{message.content}</small>
-                        <p>{dayjs().to(dayjs(message.created_at))}</p>
+                        <p className="mb-1">
+                            <span className="textUsername">
+                                {message.profile_username}:
+                            </span>
+                            <span className="textMessaggio ms-2">
+                                {message.content}
+                            </span>
+                        </p>
+                        <p className="textOrario ">{dayjs(message.updated_at).format("DD/MM HH:mm")}</p>
+                        <p className="textOrario mb-0">
+
+                        </p>
                     </article>
                 ))}
         </div>

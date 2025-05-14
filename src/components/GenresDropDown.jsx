@@ -6,19 +6,18 @@ export default function GenresDropDown() {
     const { data, error, loading } = useFetchSolution(initialUrl);
 
     return (
-        <details className="dropdown">
-            <summary>Genres</summary>
-            <ul>
-                {loading && <li>Caricamento...</li>}
-                {error && <li className="text-danger">Errore: {error}</li>}
-                {data && data.results.map((genre) => (
+        <>
+            <h1>Genres:</h1>
+            {loading && <li>Caricamento...</li>}
+            {error && <li className="text-danger">Errore: {error}</li>}
+            {data && data.results.map((genre) => (
 
-                    <button key={genre.id} className="btnCustom">
-                        <Link to={`/games/${genre.slug}`}>{genre.name}</Link>
-                    </button>
-                ))}
-            </ul>
-        </details>
+                <button key={genre.id} className="btnCustom">
+                    <Link to={`/games/${genre.slug}`}>{genre.name}</Link>
+                </button>
+            ))}
+
+        </>
 
     );
 }

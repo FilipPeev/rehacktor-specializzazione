@@ -32,16 +32,16 @@ export default function Chatbox({ data }) {
 
     return (
         <>
-            <h4>Gamers chat</h4>
-
             <div>
                 <RealtimeChat data={data && data} />
             </div>
 
-            <form onSubmit={handleMessageSubmit}>
+            <form onSubmit={handleMessageSubmit} className="chatFieldset">
                 <fieldset role="group">
-                    <input type="text" name="message" placeholder="Chat..." />
-                    <button type="submit">Invia</button>
+                    <div className="chatInputWrapper">
+                        <input type="text" name="message" placeholder="Chat..." className="inputStyle" />
+                        <button type="submit" className="sendButton">Invia</button>
+                    </div>
                 </fieldset>
             </form>
         </>
