@@ -13,7 +13,6 @@
 
 ## Pagine
 
-* Rimpiazza con le pagine visitabili
 
 1. Pagina 1 - Home page con lista videogiochi
 2. Pagina 2 - Pagina Account
