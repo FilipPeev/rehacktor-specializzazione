@@ -308,6 +308,7 @@ h4 {
     position: relative;
     display: block;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 2rem;
 }
 
 .button {
