@@ -1,12 +1,8 @@
 import GenresDropDown from "./GenresDropDown";
 import LoginRegisterButton from "./LoginRegisterButton";
 import Searchbar from "./SearchBar";
-import { useContext } from "react";
-import SessionContext from "../context/SessionContext";
 
 export default function Sidebar() {
-
-    const { session } = useContext(SessionContext);
 
     return (
         <div
@@ -29,11 +25,11 @@ export default function Sidebar() {
             <div className="offcanvas-body sidebarCustom">
                 <div className="d-block d-md-none my-3">
                     <div className="paste-button">
-                        <button className="button">Ciao, {session?.user.user_metadata.first_name}!</button>
+                        <button className="button">Account</button>
                         <div className="dropdown-content">
+                            <LoginRegisterButton />
                             <a id="top" href="/account">Profile Settings</a>
                             <a id="middle" href="/profile">Favourites</a>
-                            <LoginRegisterButton />
                         </div>
                     </div>
                 </div>
