@@ -9,11 +9,10 @@ export default function ProfilePage() {
 
     return (
         <div className="container">
-            <h1 className="mt-3 text-center">Ciao {session?.user.user_metadata.first_name}</h1>
             <div>
-                <h4 className="mt-3 text-center">I Tuoi Giochi Preferiti:</h4>
-                {favorites.length == 0 && <p>Non ci sono favoriti al momento...</p>}
-                <div className="row" >
+                <h1 className="mt-4 text-center">I Tuoi Giochi Preferiti:</h1>
+                {favorites.length == 0 && <p className="text-center">Non ci sono favoriti al momento...</p>}
+                <div className="row">
                     {favorites.map((game) => (
                         <div className="col-3 my-5" key={game.id} >
                             < CardGame

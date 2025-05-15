@@ -74,9 +74,10 @@ export default function AccountPage() {
     };
 
     return (
-        <div className="container">
-            <h2>Profile Settings</h2>
-            <form onSubmit={updateProfile} className="form-widget">
+        <div className="d-flex justify-content-center">
+
+            <form onSubmit={updateProfile} className="profileSettings">
+                <h1 className="text-center">Profile Settings</h1>
                 <Avatar
                     url={avatar_url}
                     size={150}
@@ -84,30 +85,14 @@ export default function AccountPage() {
                         updateProfile(event, url);
                     }}
                 />
-
-                <div>
-                    <label htmlFor="email">Email</label>
-                    <input id="email" type="text" value={session?.user?.email || ""} disabled />
-                </div>
-
-                <div>
-                    <label htmlFor="username">Username</label>
-                    <input
-                        id="username"
-                        type="text"
-                        required
-                        value={username || ""}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-                </div>
-
-                <div>
+                <div >
                     <label htmlFor="first_name">First name</label>
                     <input
                         id="first_name"
                         type="text"
                         value={first_name || ""}
                         onChange={(e) => setFirstName(e.target.value)}
+                        className="w-100 profileInput"
                     />
                 </div>
 
@@ -118,13 +103,33 @@ export default function AccountPage() {
                         type="text"
                         value={last_name || ""}
                         onChange={(e) => setLastName(e.target.value)}
+                        className="w-100 profileInput"
                     />
                 </div>
+
+                <div>
+                    <label htmlFor="email">Email</label>
+                    <input id="email" type="text" value={session?.user?.email || ""} className="w-100 profileInput" />
+                </div>
+
+                <div>
+                    <label htmlFor="username">Username</label>
+                    <input
+                        id="username"
+                        type="text"
+                        required
+                        value={username || ""}
+                        onChange={(e) => setUsername(e.target.value)}
+                        className="w-100 profileInput"
+                    />
+                </div>
+
 
                 <div>
                     <button
                         type="submit"
                         disabled={loading}
+                        className="profileBtn"
                     >
                         {loading ? "Loading ..." : "Update"}
                     </button>

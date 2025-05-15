@@ -19,18 +19,14 @@ export default function LoginRegisterButton() {
         session ? (
 
             <span>
-                <a href="/profile">{session?.user.user_metadata.first_name}!</a>
-                <button onClick={signOut} className="btnLogout">Logout</button>
+                <a href="/" onClick={(e) => { e.preventDefault(); signOut(); }} className="dropdown-link" id="bottom">Logout.</a>
             </span>
-
 
         ) : (
             <>
-                <div>
-
-                    <Link to="/login" className="">Accedi</Link>
-
-                </div>
+                <span>
+                    <Link to="/login" className="">Accedi.</Link>
+                </span>
             </>
         )
 

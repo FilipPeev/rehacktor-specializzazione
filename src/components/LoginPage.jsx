@@ -64,7 +64,7 @@ export default function LoginPage() {
 
     return (
         <div className="d-flex justify-content-center">
-            <form onSubmit={onSubmit} noValidate className="registerLogin">
+            <form onSubmit={onSubmit} noValidate className="login">
                 <label htmlFor="email">Email:</label>
                 <input
                     type="email"
@@ -92,7 +92,7 @@ export default function LoginPage() {
                 {formErrors.password && <small>{formErrors.password}</small>}
 
                 <br />
-                <button type="submit">Sign in</button>
+                <button type="submit" className="btnLoginRegister">Sign in</button>
                 <p>Non hai un account? <a href="/register" className="link">Registrati.</a></p>
             </form>
         </div>

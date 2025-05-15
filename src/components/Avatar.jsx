@@ -50,25 +50,27 @@ export default function Avatar({ url, size, onUpload }) {
     }
 
     return (
-        <div>
-            {avatarUrl ? (
-                <img
-                    src={avatarUrl}
-                    alt="Avatar"
-                    className="avatar image"
-                    style={{ height: size, width: size, boxShadow: "3px 3px 8px black" }}
-                />
-            ) : (
-                <div className="avatar no-image" style={{ height: size, width: size, }} />
-            )}
-
-            <div style={{ width: size }}>
+        <div className="d-flex flex-column align-items-center justify-content-center">
+            <label htmlFor="single" style={{ cursor: "pointer" }}>
+                {avatarUrl ? (
+                    <img
+                        src={avatarUrl}
+                        alt="Avatar"
+                        className="my-5"
+                        style={{ height: size, width: size, boxShadow: "3px 3px 8px black" }}
+                    />
+                ) : (
+                    <img src="https://icons.veryicon.com/png/o/miscellaneous/rookie-official-icon-gallery/225-default-avatar.png" alt="" style={{ height: size, width: size }} className="my-3 " />
+                )}
+            </label>
+            <div>
                 <input
                     type="file"
                     id="single"
                     accept="image/*"
                     onChange={uploadAvatar}
                     disabled={uploading}
+                    className="d-none"
                 />
             </div>
         </div>

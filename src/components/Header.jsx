@@ -3,22 +3,29 @@ import Searchbar from "./SearchBar";
 
 export default function Header() {
 
+
+
     return (
         <nav className="position-relative d-flex align-items-center justify-content-between headerCustom w-100 px-3">
 
-            {/* SINISTRA */}
             <div className="d-flex align-items-center">
                 <a href="/" className="rehacktor">Rehacktor</a>
             </div>
 
-            {/* CENTRO (searchbar centrata assoluta) */}
-            <div className="ms-5" style={{ width: '40%' }}>
+            <div className="d-none d-md-block" style={{ width: '40%' }}>
                 <Searchbar />
             </div>
 
-            {/* DESTRA */}
-            <div className="d-flex align-items-center gap-3">
-                <span className="text-white">Ciao, <LoginRegisterButton /></span>
+            <div className="d-flex align-items-center gap-3 ">
+                <div className="paste-button d-none d-md-block">
+                    <button className="button">Account</button>
+                    <div className="dropdown-content">
+                        <LoginRegisterButton />
+                        <a id="top" href="/account">Profile Settings</a>
+                        <a id="middle" href="/profile">Favourites</a>
+                    </div>
+                </div>
+
                 <button
                     className="btn d-flex align-items-center burger"
                     type="button"

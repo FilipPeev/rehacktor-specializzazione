@@ -12,7 +12,7 @@ export default function ToggleFavourite({ data }) {
 
     const addFavourites = async (game) => {
         if (!session || !session.user) {
-            alert("Utente non autenticato");
+            alert("Devi essere loggato per poter aggiungere nei preferiti!");
             return;
         }
 
