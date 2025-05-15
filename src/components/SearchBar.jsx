@@ -26,7 +26,7 @@ export default function Searchbar() {
                     onChange={(event) => setSearch(event.target.value)}
                     value={search}
                     aria-invalid={ariaInvalid}
-                    className="searchInput text-light"
+                    className="searchInput"
                 />
             </fieldset>
         </form>

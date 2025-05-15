@@ -21,8 +21,8 @@ export default function Header() {
                     <button className="button">Account</button>
                     <div className="dropdown-content">
                         <LoginRegisterButton />
-                        <a id="top" href="/account">Profile Settings</a>
-                        <a id="middle" href="/profile">Favourites</a>
+                        <a id="middle" href="/account">Profile Settings</a>
+                        <a id="bottom" href="/profile">Favourites</a>
                     </div>
                 </div>
 

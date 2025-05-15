@@ -356,9 +356,9 @@ h4 {
     border-radius: 0px 13px 0px 0px;
 }
 
-/* .dropdown-content #bottom:hover {
+.dropdown-content #bottom:hover {
     border-radius: 0px 0px 13px 13px;
-} */
+}
 
 .paste-button:hover button {
     border-radius: 15px 15px 0px 0px;

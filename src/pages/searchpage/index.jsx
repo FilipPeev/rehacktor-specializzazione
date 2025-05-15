@@ -9,11 +9,11 @@ export default function SearchPage() {
 
     const initialUrl = `https://api.rawg.io/api/games?key=19dbfbcb505b4038806d26436003cab8&search=${game}`
 
-    const { loading, data, error, updateUrl } = useFetchSolution(initialUrl);
+    const { loading, data, error } = useFetchSolution(initialUrl);
 
-    useEffect(() => {
-        updateUrl(initialUrl);
-    }, [initialUrl, updateUrl]);
+    // useEffect(() => {
+    //     updateUrl(initialUrl);
+    // }, [initialUrl, updateUrl]);
 
     return (
         <>

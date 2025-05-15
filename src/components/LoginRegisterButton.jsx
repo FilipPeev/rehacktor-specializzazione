@@ -19,7 +19,7 @@ export default function LoginRegisterButton() {
         session ? (
 
             <span>
-                <a href="/" onClick={(e) => { e.preventDefault(); signOut(); }} className="dropdown-link" id="bottom">Logout.</a>
+                <a href="/" onClick={(e) => { e.preventDefault(); signOut(); }} className="dropdown-link" id="top">Logout.</a>
             </span>
 
         ) : (
